@@ -1,19 +1,126 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ogretmen.Master.cs" Inherits="OgrenciBilgiSistemi.Site1" %>
 
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html>
-<head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Ogrenci Bilgi Sistemi</title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+    <link href="OgrenciBilgiSistemiTEMA/bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="OgrenciBilgiSistemiTEMA/StyleSheet2.css" rel="stylesheet" />
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-            </asp:ContentPlaceHolder>
+
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Menüler</h3>
+                <strong>BS</strong>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-graduate"></i>
+                        Öğrenci Listesi
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="Default.aspx">
+                                <i class="fas fa-list-ol"></i>
+                                Öğrenci Listesi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="OgrenciEkle.aspx">
+                                <i class="fas fa-plus-square"></i>
+                                Öğrenci Ekle
+                            </a>
+                        </li>
+                        <li>
+                            <a href="OgrenciBul.aspx">
+                                <i class="fas fa-search"></i>
+                                Öğrenci Bul
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        Dersler
+                    </a>
+                    <a href="#">
+                        <i class="fas fa-copy"></i>
+                        Mesajlar
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Duyrular
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-book"></i>
+                        Notlar
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-table"></i>
+                        İstatistikler
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        Grafikler
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-images"></i>
+                        Galeri
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        Ayarlar
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server"></asp:ContentPlaceHolder>
         </div>
-    </form>
+    </div>
+
+    <script src="OgrenciBilgiSistemiTEMA/jquery-1.12.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="OgrenciBilgiSistemiTEMA/js-bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
