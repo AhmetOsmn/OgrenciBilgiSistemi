@@ -66,11 +66,25 @@
                         Mesajlar
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        Duyrular
+                <li class="active">
+                    <a href="#homeSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-bell"></i>
+                        Duyurular
                     </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu2">
+                        <li>
+                            <a href="DuyuruListesi.aspx">
+                                <i class="fas fa-list-ol"></i>
+                                Duyuru Listesi
+                            </a>
+                        </li>
+                        <li>
+                            <a href="DuyuruEkle.aspx">
+                                <i class="fas fa-plus-square"></i>
+                                Duyuru Ekle
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="#">
