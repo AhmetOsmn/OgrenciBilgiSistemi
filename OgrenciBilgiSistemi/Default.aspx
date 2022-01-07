@@ -26,7 +26,7 @@
                         <td><%#Eval("OgrenciTelefon")%></td>
                         <td><%#Eval("OgrenciMail")%></td>
                         <td><%#Eval("OgrenciSifre")%></td>
-                        <td>
+                        <td style="width:200px; min-width:200px; text-align:center">
                             <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "~/OgrenciGuncelle.aspx?OgrenciID="+Eval("OgrenciID")%>' runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
                             <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# "~/OgrenciSil.aspx?OgrenciID="+Eval("OgrenciID")%>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
                         </td>

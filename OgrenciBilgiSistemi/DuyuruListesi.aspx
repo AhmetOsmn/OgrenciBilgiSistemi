@@ -20,7 +20,7 @@
                         <td><%#Eval("DuyuruBaslik")%></td>
                         <td><%#Eval("DuyuruIcerik")%></td>
                         <td><%#Eval("DuyuruOgretmen")%></td>
-                        <td>
+                        <td style="width:200px; min-width:200px; text-align:center;">
                             <%--NavigateUrl='<%# "~/OgrenciGuncelle.aspx?OgrenciID="+Eval("OgrenciID")%>'--%> 
                             <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "~/DuyuruGuncelle.aspx?DuyuruID="+Eval("DuyuruID")%>' runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
                             <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# "~/DuyuruSil.aspx?DuyuruID="+Eval("DuyuruID")%>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>

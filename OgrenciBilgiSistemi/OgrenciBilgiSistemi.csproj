@@ -68,10 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="DersEkle.aspx" />
+    <Content Include="DersGuncelle.aspx" />
+    <Content Include="DersListesi.aspx" />
+    <Content Include="DersSil.aspx" />
     <Content Include="DuyuruEkle.aspx" />
     <Content Include="DuyuruGuncelle.aspx" />
     <Content Include="DuyuruListesi.aspx" />
     <Content Include="DuyuruSil.aspx" />
+    <Content Include="NotGuncelle.aspx" />
+    <Content Include="NotListesi.aspx" />
     <Content Include="OgrenciBilgiSistemiTEMA\bootstrap-3.3.7\.gitattributes" />
     <Content Include="OgrenciBilgiSistemiTEMA\bootstrap-3.3.7\.gitignore" />
     <Content Include="OgrenciBilgiSistemiTEMA\bootstrap-3.3.7\dist\css\bootstrap-theme.css" />
@@ -360,6 +366,34 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DersEkle.aspx.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersEkle.aspx.designer.cs">
+      <DependentUpon>DersEkle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersGuncelle.aspx.designer.cs">
+      <DependentUpon>DersGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersListesi.aspx.cs">
+      <DependentUpon>DersListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersListesi.aspx.designer.cs">
+      <DependentUpon>DersListesi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DersSil.aspx.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DersSil.aspx.designer.cs">
+      <DependentUpon>DersSil.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DuyuruEkle.aspx.cs">
       <DependentUpon>DuyuruEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -387,6 +421,20 @@
     </Compile>
     <Compile Include="DuyuruSil.aspx.designer.cs">
       <DependentUpon>DuyuruSil.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotGuncelle.aspx.cs">
+      <DependentUpon>NotGuncelle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotGuncelle.aspx.designer.cs">
+      <DependentUpon>NotGuncelle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotListesi.aspx.cs">
+      <DependentUpon>NotListesi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NotListesi.aspx.designer.cs">
+      <DependentUpon>NotListesi.aspx</DependentUpon>
     </Compile>
     <Compile Include="OgrenciEkle.aspx.cs">
       <DependentUpon>OgrenciEkle.aspx</DependentUpon>
