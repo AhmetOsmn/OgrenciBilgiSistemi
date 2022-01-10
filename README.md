@@ -12,4 +12,8 @@
 ## Grafikler
 ![04-GrafiklerEklendi](https://user-images.githubusercontent.com/44196434/148663453-fff7fa2f-ba23-405f-889f-3bb0109476ba.png)
 
+## Mesajlar
+![05-MesajlarEklendi](https://user-images.githubusercontent.com/44196434/148821106-80cad201-09a3-4344-926f-8b3f8ea1de3c.png)
+
+
 
