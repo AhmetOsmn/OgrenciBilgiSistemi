@@ -15,5 +15,5 @@
 ## Mesajlar
 ![05-MesajlarEklendi](https://user-images.githubusercontent.com/44196434/148821106-80cad201-09a3-4344-926f-8b3f8ea1de3c.png)
 
-
-
+## İstatistikler
+![06-IstatistiklerEklendi](https://user-images.githubusercontent.com/44196434/148834607-a2fff18d-5ce4-42ab-b6e9-f475be345be8.png)
