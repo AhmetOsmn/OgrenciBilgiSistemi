@@ -486,6 +486,159 @@ FROM            Dersler where DersID=@DersID</CommandText>
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="Istatistik0" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="Istatistik0" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="Istatistik0" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        
+FROM            Ogrenciler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="AtilanMesajSayisi" Modifier="Public" Name="AtilanMesajSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="AtilanMesajSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select Count(*) from Mesajlar
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="BiyolojiOrtalama" Modifier="Public" Name="BiyolojiOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="BiyolojiOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=6</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DilAnlatimOrtalama" Modifier="Public" Name="DilAnlatimOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="DilAnlatimOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="DuyuruSayisi" Modifier="Public" Name="DuyuruSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="DuyuruSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select COUNT(*) from Duyurular</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="EdebiyatOrtalama" Modifier="Public" Name="EdebiyatOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="EdebiyatOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=3</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FelsefeOrtalama" Modifier="Public" Name="FelsefeOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="FelsefeOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=9</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="FizikOrtalama" Modifier="Public" Name="FizikOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="FizikOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=4</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="IngilizceOrtalama" Modifier="Public" Name="IngilizceOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="IngilizceOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=7</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="KimyaOrtalama" Modifier="Public" Name="KimyaOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="KimyaOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=5</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MatematikOrtalama" Modifier="Public" Name="MatematikOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="MatematikOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MatematikSinav1" Modifier="Public" Name="MatematikSinav1" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="MatematikSinav1">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Sinav1) from Notlar where DersID=2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MatematikSinav2" Modifier="Public" Name="MatematikSinav2" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="MatematikSinav2">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Sinav2) from Notlar where DersID=2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="MatematikSinav3" Modifier="Public" Name="MatematikSinav3" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="MatematikSinav3">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Sinav3) from Notlar where DersID=2</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TarihOrtalama" Modifier="Public" Name="TarihOrtalama" QueryType="Scalar" ScalarCallRetval="System.Decimal, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="TarihOrtalama">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select AVG(Ortalama) from Notlar where DersID=10</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TDersSayisi" Modifier="Public" Name="TDersSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="TDersSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT      Count(*) from Dersler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TOgrenciSayisi" Modifier="Public" Name="TOgrenciSayisi" QueryType="Scalar" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="TOgrenciSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  Count(*) from Ogrenciler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="_MY_OgrenciBilgiSistemiConnectionString (Web.config)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="TOgretmenSayisi" Modifier="Public" Name="TOgretmenSayisi" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="TOgretmenSayisi">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT   Count(*) from Ogretmenler</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -664,6 +817,10 @@ FROM            Dersler where DersID=@DersID</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="DataTable1" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_UserTableName="DataTable1">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -689,8 +846,8 @@ FROM            Dersler where DersID=@DersID</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK_Duyurular_Ogretmenler" msdata:parent="Ogretmenler" msdata:child="Duyurular" msdata:parentkey="OgretmenID" msdata:childkey="DuyuruOgretmen" msprop:Generator_UserParentTable="Ogretmenler" msprop:Generator_UserChildTable="Duyurular" msprop:Generator_RelationVarName="relationFK_Duyurular_Ogretmenler" msprop:Generator_ChildPropName="GetDuyurularRows" msprop:Generator_ParentPropName="OgretmenlerRow" msprop:Generator_UserRelationName="FK_Duyurular_Ogretmenler" />
-      <msdata:Relationship name="FK_Ogretmenler_Dersler" msdata:parent="Dersler" msdata:child="Ogretmenler" msdata:parentkey="DersID" msdata:childkey="OgretmenBrans" msprop:Generator_UserParentTable="Dersler" msprop:Generator_UserChildTable="Ogretmenler" msprop:Generator_RelationVarName="relationFK_Ogretmenler_Dersler" msprop:Generator_ChildPropName="GetOgretmenlerRows" msprop:Generator_UserRelationName="FK_Ogretmenler_Dersler" msprop:Generator_ParentPropName="DerslerRow" />
+      <msdata:Relationship name="FK_Duyurular_Ogretmenler" msdata:parent="Ogretmenler" msdata:child="Duyurular" msdata:parentkey="OgretmenID" msdata:childkey="DuyuruOgretmen" msprop:Generator_UserParentTable="Ogretmenler" msprop:Generator_UserChildTable="Duyurular" msprop:Generator_RelationVarName="relationFK_Duyurular_Ogretmenler" msprop:Generator_ChildPropName="GetDuyurularRows" msprop:Generator_UserRelationName="FK_Duyurular_Ogretmenler" msprop:Generator_ParentPropName="OgretmenlerRow" />
+      <msdata:Relationship name="FK_Ogretmenler_Dersler" msdata:parent="Dersler" msdata:child="Ogretmenler" msdata:parentkey="DersID" msdata:childkey="OgretmenBrans" msprop:Generator_UserParentTable="Dersler" msprop:Generator_UserChildTable="Ogretmenler" msprop:Generator_RelationVarName="relationFK_Ogretmenler_Dersler" msprop:Generator_ChildPropName="GetOgretmenlerRows" msprop:Generator_ParentPropName="DerslerRow" msprop:Generator_UserRelationName="FK_Ogretmenler_Dersler" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
