@@ -9,3 +9,7 @@
 ## Not Listesi
 ![NotListesiEklendi](https://user-images.githubusercontent.com/44196434/148617178-522e42fe-302f-4cab-ac4a-277eec72285a.png)
 
+## Grafikler
+![04-GrafiklerEklendi](https://user-images.githubusercontent.com/44196434/148663453-fff7fa2f-ba23-405f-889f-3bb0109476ba.png)
+
+
