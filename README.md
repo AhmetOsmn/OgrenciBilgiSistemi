@@ -20,3 +20,6 @@
 
 ## Login
 ![07-LoginSayfasiEklendi](https://user-images.githubusercontent.com/44196434/148843706-398f5c4f-e248-48e4-8c0e-4e233d82d7d4.png)
+
+## Oğrenci Formu
+![08-OgrenciFormuEklendi](https://user-images.githubusercontent.com/44196434/149201650-12986600-25a8-4b9f-9ee7-53b0ca6ac1b0.png)
