@@ -42,11 +42,10 @@
             </div>
             <br />
             <div>
-                <asp:Label for="TextBoxOgrenciFotograf" runat="server">Öğrenci Fotoğraf Link</asp:Label>
+                <asp:Label for="TextBoxOgrenciFotograf" runat="server">Fotoğraf</asp:Label>
                 <br />
                 <asp:TextBox ID="TextBoxOgrenciFotograf" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
-            <br />
         </div>
         <asp:Button ID="Button1" runat="server" Text="Güncelle" CssClass="btn btn-warning" OnClick="Button1_Click" />
 

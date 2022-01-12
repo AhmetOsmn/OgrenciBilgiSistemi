@@ -35,18 +35,18 @@
             <br />
             <div class="mb-3">
                 <strong>
-                <asp:Label for="TextBoxDersAdi" runat="server" CssClass="form-label">Kullanıcı Adı</asp:Label>
+                <asp:Label for="TextBoxKullaniciAdi" runat="server" CssClass="form-label">Kullanıcı Adı - Öğrenci Numarası</asp:Label>
                 </strong>
                 <br />
-                <asp:TextBox ID="TextBoxDersAdi" runat="server" CssClass="form-control"></asp:TextBox>
+                <asp:TextBox ID="TextBoxKullaniciAdi" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <br />
             <div class="mb-3">
                 <strong>
-                <asp:Label for="TextBoxDersAdi" runat="server" CssClass="form-label">Şifre</asp:Label>
+                <asp:Label for="TextBoxSifre" runat="server" CssClass="form-label">Şifre</asp:Label>
                 </strong>
                 <br />
-                <asp:TextBox ID="TextBox1" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
+                <asp:TextBox ID="TextBoxSifre" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
             </div>
             <br />
 

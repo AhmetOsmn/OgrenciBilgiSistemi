@@ -26,7 +26,6 @@ namespace OgrenciBilgiSistemi
                     TextBoxOgrenciTelefon.Text = dt.OgrenciSec(id)[0].OgrenciTelefon;
                     TextBoxOgrenciMail.Text = dt.OgrenciSec(id)[0].OgrenciMail;
                     TextBoxOgrenciSifre.Text = dt.OgrenciSec(id)[0].OgrenciSifre;
-                    TextBoxOgrenciFotograf.Text = dt.OgrenciSec(id)[0].OgrenciFotograf;
                 }
                 catch (Exception)
                 {

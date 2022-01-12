@@ -503,8 +503,6 @@ namespace OgrenciBilgiSistemi {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class OgrencilerDataTable : global::System.Data.TypedTableBase<OgrencilerRow> {
             
-            private global::System.Data.DataColumn columnOgrenciID;
-            
             private global::System.Data.DataColumn columnOgrenciAd;
             
             private global::System.Data.DataColumn columnOgrenciSoyad;
@@ -515,9 +513,9 @@ namespace OgrenciBilgiSistemi {
             
             private global::System.Data.DataColumn columnOgrenciSifre;
             
-            private global::System.Data.DataColumn columnOgrenciFotograf;
-            
             private global::System.Data.DataColumn columnOgrenciNumara;
+            
+            private global::System.Data.DataColumn columnOgrID;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -550,14 +548,6 @@ namespace OgrenciBilgiSistemi {
             protected OgrencilerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn OgrenciIDColumn {
-                get {
-                    return this.columnOgrenciID;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -602,17 +592,17 @@ namespace OgrenciBilgiSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn OgrenciFotografColumn {
+            public global::System.Data.DataColumn OgrenciNumaraColumn {
                 get {
-                    return this.columnOgrenciFotograf;
+                    return this.columnOgrenciNumara;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn OgrenciNumaraColumn {
+            public global::System.Data.DataColumn OgrIDColumn {
                 get {
-                    return this.columnOgrenciNumara;
+                    return this.columnOgrID;
                 }
             }
             
@@ -653,17 +643,16 @@ namespace OgrenciBilgiSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OgrencilerRow AddOgrencilerRow(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf, string OgrenciNumara) {
+            public OgrencilerRow AddOgrencilerRow(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciNumara) {
                 OgrencilerRow rowOgrencilerRow = ((OgrencilerRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         OgrenciAd,
                         OgrenciSoyad,
                         OgrenciTelefon,
                         OgrenciMail,
                         OgrenciSifre,
-                        OgrenciFotograf,
-                        OgrenciNumara};
+                        OgrenciNumara,
+                        null};
                 rowOgrencilerRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowOgrencilerRow);
                 return rowOgrencilerRow;
@@ -671,9 +660,9 @@ namespace OgrenciBilgiSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public OgrencilerRow FindByOgrenciID(int OgrenciID) {
+            public OgrencilerRow FindByOgrID(int OgrID) {
                 return ((OgrencilerRow)(this.Rows.Find(new object[] {
-                            OgrenciID})));
+                            OgrID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -693,21 +682,18 @@ namespace OgrenciBilgiSistemi {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnOgrenciID = base.Columns["OgrenciID"];
                 this.columnOgrenciAd = base.Columns["OgrenciAd"];
                 this.columnOgrenciSoyad = base.Columns["OgrenciSoyad"];
                 this.columnOgrenciTelefon = base.Columns["OgrenciTelefon"];
                 this.columnOgrenciMail = base.Columns["OgrenciMail"];
                 this.columnOgrenciSifre = base.Columns["OgrenciSifre"];
-                this.columnOgrenciFotograf = base.Columns["OgrenciFotograf"];
                 this.columnOgrenciNumara = base.Columns["OgrenciNumara"];
+                this.columnOgrID = base.Columns["OgrID"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnOgrenciID = new global::System.Data.DataColumn("OgrenciID", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOgrenciID);
                 this.columnOgrenciAd = new global::System.Data.DataColumn("OgrenciAd", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOgrenciAd);
                 this.columnOgrenciSoyad = new global::System.Data.DataColumn("OgrenciSoyad", typeof(string), null, global::System.Data.MappingType.Element);
@@ -718,24 +704,24 @@ namespace OgrenciBilgiSistemi {
                 base.Columns.Add(this.columnOgrenciMail);
                 this.columnOgrenciSifre = new global::System.Data.DataColumn("OgrenciSifre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOgrenciSifre);
-                this.columnOgrenciFotograf = new global::System.Data.DataColumn("OgrenciFotograf", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOgrenciFotograf);
                 this.columnOgrenciNumara = new global::System.Data.DataColumn("OgrenciNumara", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnOgrenciNumara);
+                this.columnOgrID = new global::System.Data.DataColumn("OgrID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOgrID);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnOgrenciID}, true));
-                this.columnOgrenciID.AutoIncrement = true;
-                this.columnOgrenciID.AutoIncrementSeed = -1;
-                this.columnOgrenciID.AutoIncrementStep = -1;
-                this.columnOgrenciID.AllowDBNull = false;
-                this.columnOgrenciID.ReadOnly = true;
-                this.columnOgrenciID.Unique = true;
+                                this.columnOgrID}, true));
                 this.columnOgrenciAd.MaxLength = 30;
                 this.columnOgrenciSoyad.MaxLength = 30;
                 this.columnOgrenciTelefon.MaxLength = 20;
                 this.columnOgrenciMail.MaxLength = 50;
                 this.columnOgrenciSifre.MaxLength = 50;
                 this.columnOgrenciNumara.MaxLength = 5;
+                this.columnOgrID.AutoIncrement = true;
+                this.columnOgrID.AutoIncrementSeed = -1;
+                this.columnOgrID.AutoIncrementStep = -1;
+                this.columnOgrID.AllowDBNull = false;
+                this.columnOgrID.ReadOnly = true;
+                this.columnOgrID.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2691,17 +2677,6 @@ namespace OgrenciBilgiSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int OgrenciID {
-                get {
-                    return ((int)(this[this.tableOgrenciler.OgrenciIDColumn]));
-                }
-                set {
-                    this[this.tableOgrenciler.OgrenciIDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string OgrenciAd {
                 get {
                     try {
@@ -2782,22 +2757,6 @@ namespace OgrenciBilgiSistemi {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string OgrenciFotograf {
-                get {
-                    try {
-                        return ((string)(this[this.tableOgrenciler.OgrenciFotografColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'OgrenciFotograf\' in table \'Ogrenciler\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableOgrenciler.OgrenciFotografColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public string OgrenciNumara {
                 get {
                     try {
@@ -2809,6 +2768,17 @@ namespace OgrenciBilgiSistemi {
                 }
                 set {
                     this[this.tableOgrenciler.OgrenciNumaraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int OgrID {
+                get {
+                    return ((int)(this[this.tableOgrenciler.OgrIDColumn]));
+                }
+                set {
+                    this[this.tableOgrenciler.OgrIDColumn] = value;
                 }
             }
             
@@ -2870,18 +2840,6 @@ namespace OgrenciBilgiSistemi {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetOgrenciSifreNull() {
                 this[this.tableOgrenciler.OgrenciSifreColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsOgrenciFotografNull() {
-                return this.IsNull(this.tableOgrenciler.OgrenciFotografColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetOgrenciFotografNull() {
-                this[this.tableOgrenciler.OgrenciFotografColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3981,19 +3939,19 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Ogrenciler";
-            tableMapping.ColumnMappings.Add("OgrenciID", "OgrenciID");
             tableMapping.ColumnMappings.Add("OgrenciAd", "OgrenciAd");
             tableMapping.ColumnMappings.Add("OgrenciSoyad", "OgrenciSoyad");
             tableMapping.ColumnMappings.Add("OgrenciTelefon", "OgrenciTelefon");
             tableMapping.ColumnMappings.Add("OgrenciMail", "OgrenciMail");
             tableMapping.ColumnMappings.Add("OgrenciSifre", "OgrenciSifre");
             tableMapping.ColumnMappings.Add("OgrenciNumara", "OgrenciNumara");
+            tableMapping.ColumnMappings.Add("OgrID", "OgrID");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Ogrenciler] WHERE (([OgrenciID] = @Original_OgrenciID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Ogrenciler] WHERE (([OgrID] = @Original_OgrID))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OgrenciID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OgrID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [Ogrenciler] ([OgrenciNumara], [OgrenciAd], [OgrenciSoyad], [OgrenciT" +
@@ -4008,7 +3966,10 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [Ogrenciler] SET [OgrenciNumara] = @OgrenciNumara, [OgrenciAd] = @OgrenciAd, [OgrenciSoyad] = @OgrenciSoyad, [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @OgrenciMail, [OgrenciSifre] = @OgrenciSifre WHERE (([OgrenciID] = @Original_OgrenciID))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [Ogrenciler] SET [OgrenciNumara] = @OgrenciNumara, [OgrenciAd] = @OgrenciA" +
+                "d, [OgrenciSoyad] = @OgrenciSoyad, [OgrenciTelefon] = @OgrenciTelefon, [OgrenciM" +
+                "ail] = @OgrenciMail, [OgrenciSifre] = @OgrenciSifre WHERE (([OgrID] = @Original_" +
+                "OgrID))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciNumara", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -4016,7 +3977,7 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciMail", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciMail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OgrenciID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_OgrID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "OgrID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4029,49 +3990,65 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[5];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[7];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        OgrenciID, OgrenciNumara, OgrenciAd, OgrenciSoyad, OgrenciTelefon, " +
-                "OgrenciMail, OgrenciSifre\r\nFROM            Ogrenciler";
+            this._commandCollection[0].CommandText = "SELECT        OgrID,OgrenciNumara, OgrenciAd, OgrenciSoyad, OgrenciTelefon, Ogren" +
+                "ciMail, OgrenciSifre\r\nFROM            Ogrenciler";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT OgrenciAd, OgrenciID, OgrenciMail, OgrenciNumara, OgrenciSifre, OgrenciSoy" +
-                "ad, OgrenciTelefon FROM Ogrenciler WHERE (OgrenciID = @OgrenciID)";
+            this._commandCollection[1].CommandText = "SELECT OgrID, OgrenciAd, OgrenciMail, OgrenciNumara, OgrenciSifre, OgrenciSoyad, " +
+                "OgrenciTelefon FROM Ogrenciler WHERE (OgrenciID = @OgrenciID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO [Ogrenciler] ([OgrenciAd], [OgrenciSoyad], [OgrenciTelefon], [Ogrenci" +
-                "Mail], [OgrenciSifre], [OgrenciFotograf]) VALUES (@OgrenciAd, @OgrenciSoyad, @Og" +
-                "renciTelefon, @OgrenciMail, @OgrenciSifre, @OgrenciFotograf)";
+            this._commandCollection[2].CommandText = "SELECT OgrID, OgrenciAd, OgrenciMail, OgrenciNumara, OgrenciSifre, OgrenciSoyad, " +
+                "OgrenciTelefon FROM Ogrenciler WHERE (OgrenciNumara = @OgrenciNumara)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciMail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciMail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciFotograf", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciFotograf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciNumara", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
-            this._commandCollection[3].CommandText = "UPDATE [Ogrenciler] SET [OgrenciAd] = @OgrenciAd, [OgrenciSoyad] = @OgrenciSoyad," +
-                " [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @OgrenciMail, [OgrenciSifre" +
-                "] = @OgrenciSifre, [OgrenciFotograf] = @OgrenciFotograf WHERE (([OgrenciID] = @O" +
-                "grenciID))";
+            this._commandCollection[3].CommandText = "UPDATE [Ogrenciler] SET [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @Ogre" +
+                "nciMail, [OgrenciSifre] = @OgrenciSifre WHERE (([OgrenciNumara] = @OgrenciNumara" +
+                "))";
             this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciMail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciMail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciFotograf", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciFotograf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciNumara", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._commandCollection[4] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[4].Connection = this.Connection;
-            this._commandCollection[4].CommandText = "DELETE FROM [Ogrenciler] WHERE (([OgrenciID] = @OgrenciID))";
+            this._commandCollection[4].CommandText = "INSERT INTO [Ogrenciler] ([OgrenciAd], [OgrenciSoyad], [OgrenciTelefon], [Ogrenci" +
+                "Mail], [OgrenciSifre], [OgrenciFotograf]) VALUES (@OgrenciAd, @OgrenciSoyad, @Og" +
+                "renciTelefon, @OgrenciMail, @OgrenciSifre, @OgrenciFotograf)";
             this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciMail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciMail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[4].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciFotograf", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciFotograf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[5].Connection = this.Connection;
+            this._commandCollection[5].CommandText = "UPDATE [Ogrenciler] SET [OgrenciAd] = @OgrenciAd, [OgrenciSoyad] = @OgrenciSoyad," +
+                " [OgrenciTelefon] = @OgrenciTelefon, [OgrenciMail] = @OgrenciMail, [OgrenciSifre" +
+                "] = @OgrenciSifre, [OgrenciFotograf] = @OgrenciFotograf WHERE (([OgrID] = @OgrID" +
+                "))";
+            this._commandCollection[5].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciAd", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciAd", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSoyad", global::System.Data.SqlDbType.VarChar, 30, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSoyad", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciTelefon", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciTelefon", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciMail", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciMail", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciSifre", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciSifre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciFotograf", global::System.Data.SqlDbType.VarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "OgrenciFotograf", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[5].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[6] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[6].Connection = this.Connection;
+            this._commandCollection[6].CommandText = "DELETE FROM [Ogrenciler] WHERE (([OgrID] = @OgrID))";
+            this._commandCollection[6].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[6].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "OgrID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4127,6 +4104,42 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillOgrenciPaneli(DataSet.OgrencilerDataTable dataTable, string OgrenciNumara) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((OgrenciNumara == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OgrenciNumara));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet.OgrencilerDataTable OgrenciPaneliGetir(string OgrenciNumara) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((OgrenciNumara == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OgrenciNumara));
+            }
+            DataSet.OgrencilerDataTable dataTable = new DataSet.OgrencilerDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(DataSet.OgrencilerDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
@@ -4157,8 +4170,8 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_OgrenciID) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_OgrenciID));
+        public virtual int Delete(int Original_OgrID) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_OgrID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4236,7 +4249,7 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string OgrenciNumara, string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, int Original_OgrenciID) {
+        public virtual int Update(string OgrenciNumara, string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, int Original_OgrID) {
             if ((OgrenciNumara == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4273,7 +4286,7 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(OgrenciSifre));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_OgrenciID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_OgrID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4293,9 +4306,56 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int OgrenciBilgiGuncelle(string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciNumara) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+            if ((OgrenciTelefon == null)) {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[0].Value = ((string)(OgrenciTelefon));
+            }
+            if ((OgrenciMail == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(OgrenciMail));
+            }
+            if ((OgrenciSifre == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(OgrenciSifre));
+            }
+            if ((OgrenciNumara == null)) {
+                command.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[3].Value = ((string)(OgrenciNumara));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int OgrenciEkle(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
             if ((OgrenciAd == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4353,8 +4413,8 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
-        public virtual int OgrenciGuncelle(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf, int OgrenciID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
+        public virtual int OgrenciGuncelle(string OgrenciAd, string OgrenciSoyad, string OgrenciTelefon, string OgrenciMail, string OgrenciSifre, string OgrenciFotograf, int OgrID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[5];
             if ((OgrenciAd == null)) {
                 command.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4391,7 +4451,7 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             else {
                 command.Parameters[5].Value = ((string)(OgrenciFotograf));
             }
-            command.Parameters[6].Value = ((int)(OgrenciID));
+            command.Parameters[6].Value = ((int)(OgrID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4413,9 +4473,9 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
-        public virtual int OgrenciSil(int OgrenciID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[4];
-            command.Parameters[0].Value = ((int)(OgrenciID));
+        public virtual int OgrenciSil(int OgrID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[6];
+            command.Parameters[0].Value = ((int)(OgrID));
             global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
             if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5376,7 +5436,7 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "dbo.OgrenciNotlar";
@@ -5384,25 +5444,36 @@ namespace OgrenciBilgiSistemi.DataSetTableAdapters {
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"select Notlar.NotID,Notlar.OgrenciID,(OgrenciAd + ' ' +OgrenciSoyad) as 'OGRENCI',DersAd as 'DERS',Sinav1,Sinav2,Sinav3,Ortalama,Durum 
+            this._commandCollection[1].CommandText = @"select NotID,OgrenciID,(OgrenciAd + ' ' +OgrenciSoyad) as 'OGRENCI',DersAd as 'DERS',Sinav1,Sinav2,Sinav3,Ortalama,Durum 
 from Notlar
 inner join Ogrenciler
-on Ogrenciler.OgrenciID = Notlar.OgrenciID
+on Ogrenciler.OgrID = Notlar.OgrenciID
 inner join Dersler
-on Dersler.DersID = Notlar.DersID where NotID = @NotID";
+on Dersler.DersID = Notlar.DersID
+where OgrenciID=(select OgrID from Ogrenciler where OgrenciNumara=@OgrenciNumara)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NotID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@OgrenciNumara", global::System.Data.SqlDbType.VarChar, 5, global::System.Data.ParameterDirection.Input, 0, 0, "", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "UPDATE Notlar set Sinav1=@Sinav1, Sinav2=@Sinav2, Sinav3=@Sinav3, Ortalama=@Ortal" +
-                "ama,Durum=@Durum where NotID=@NotID";
+            this._commandCollection[2].CommandText = @"select Notlar.NotID,Notlar.OgrenciID,(OgrenciAd + ' ' +OgrenciSoyad) as 'OGRENCI',DersAd as 'DERS',Sinav1,Sinav2,Sinav3,Ortalama,Durum 
+from Notlar
+inner join Ogrenciler
+on Ogrenciler.OgrID = Notlar.OgrenciID
+inner join Dersler
+on Dersler.DersID = Notlar.DersID where NotID = @NotID";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav1", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav2", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav3", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ortalama", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Ortalama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NotID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "UPDATE Notlar set Sinav1=@Sinav1, Sinav2=@Sinav2, Sinav3=@Sinav3, Ortalama=@Ortal" +
+                "ama,Durum=@Durum where NotID=@NotID";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav1", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav2", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Sinav3", global::System.Data.SqlDbType.TinyInt, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Sinav3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ortalama", global::System.Data.SqlDbType.Decimal, 9, global::System.Data.ParameterDirection.Input, 18, 2, "Ortalama", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Durum", global::System.Data.SqlDbType.Bit, 1, global::System.Data.ParameterDirection.Input, 0, 0, "Durum", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NotID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "NotID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5433,13 +5504,13 @@ on Dersler.DersID = Notlar.DersID where NotID = @NotID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillNotGetir2(DataSet.OgrenciNotlarDataTable dataTable, global::System.Nullable<int> NotID) {
+        public virtual int FillByOgrNotu(DataSet.OgrenciNotlarDataTable dataTable, string OgrenciNumara) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((NotID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotID.Value));
+            if ((OgrenciNumara == null)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OgrenciNumara));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5452,14 +5523,40 @@ on Dersler.DersID = Notlar.DersID where NotID = @NotID";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual DataSet.OgrenciNotlarDataTable NotGetir2(global::System.Nullable<int> NotID) {
+        public virtual DataSet.OgrenciNotlarDataTable OgrenciNotu(string OgrenciNumara) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((NotID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotID.Value));
-            }
-            else {
+            if ((OgrenciNumara == null)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(OgrenciNumara));
+            }
+            DataSet.OgrenciNotlarDataTable dataTable = new DataSet.OgrenciNotlarDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillNotGetir2(DataSet.OgrenciNotlarDataTable dataTable, int NotID) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotID));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSet.OgrenciNotlarDataTable NotGetir2(int NotID) {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(NotID));
             DataSet.OgrenciNotlarDataTable dataTable = new DataSet.OgrenciNotlarDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -5470,7 +5567,7 @@ on Dersler.DersID = Notlar.DersID where NotID = @NotID";
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
         public virtual int NotGuncelle(global::System.Nullable<byte> Sinav1, global::System.Nullable<byte> Sinav2, global::System.Nullable<byte> Sinav3, global::System.Nullable<decimal> Ortalama, global::System.Nullable<bool> Durum, global::System.Nullable<int> NotID) {
-            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[2];
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[3];
             if ((Sinav1.HasValue == true)) {
                 command.Parameters[0].Value = ((byte)(Sinav1.Value));
             }
