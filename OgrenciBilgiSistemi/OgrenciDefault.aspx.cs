@@ -13,13 +13,13 @@ namespace OgrenciBilgiSistemi
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            TextBoxNumara.Text = Request.QueryString["Numara"];
+            TextBoxNumara.Text = Session["Numara"].ToString();
 
             DataSetTableAdapters.OgrencilerTableAdapter adapter = new DataSetTableAdapters.OgrencilerTableAdapter();
             string numara = TextBoxNumara.Text;
            
             TextBoxAdSoyad.Text = "AD SOYAD: "+adapter.OgrenciPaneliGetir(numara)[0].OgrenciAd + " "+ adapter.OgrenciPaneliGetir(numara)[0].OgrenciSoyad;
-            TextBoxMail.Text = "MAİL:"+ adapter.OgrenciPaneliGetir(numara)[0].OgrenciMail;
+            TextBoxMail.Text = "MAİL: "+ adapter.OgrenciPaneliGetir(numara)[0].OgrenciMail;
             TextBoxTel.Text = "TELEFON: "+ adapter.OgrenciPaneliGetir(numara)[0].OgrenciTelefon;
             TextBoxSifre.Text = "ŞİFRE: "+ adapter.OgrenciPaneliGetir(numara)[0].OgrenciSifre;
         }

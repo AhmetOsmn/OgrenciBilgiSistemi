@@ -7,12 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace OgrenciBilgiSistemi
 {
-    public partial class OgrenciNotu : System.Web.UI.Page
+    public partial class OgrenciGelenMesajlar : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataSetTableAdapters.OgrenciNotlarTableAdapter adapter = new DataSetTableAdapters.OgrenciNotlarTableAdapter();
-            Repeater1.DataSource = adapter.OgrenciNotu(Session["Numara"].ToString());
+            DataSetTableAdapters.MesajlarTableAdapter adapter = new DataSetTableAdapters.MesajlarTableAdapter();
+            Repeater1.DataSource = adapter.OgreniGelenKutusu1(Session["Numara"].ToString());
             Repeater1.DataBind();
         }
     }

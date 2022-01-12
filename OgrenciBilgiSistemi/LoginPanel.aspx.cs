@@ -28,7 +28,8 @@ namespace OgrenciBilgiSistemi
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
-                Response.Redirect("OgrenciDefault.aspx?Numara="+TextBoxKullaniciAdi.Text);
+                Session.Add("Numara", TextBoxKullaniciAdi.Text);
+                Response.Redirect("OgrenciDefault.aspx");
             }
             else
             {
