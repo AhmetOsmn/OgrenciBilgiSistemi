@@ -9,8 +9,6 @@
             <th scope="col">BAŞLIK</th>
             <th scope="col">İÇERİK</th>
             <th scope="col">TARİH</th>
-            <th scope="col">İŞLEMLER</th>
-
         </tr>
         <tbody>
 
@@ -23,10 +21,6 @@
                         <td><%#Eval("MesajBaslik")%></td>
                         <td><%#Eval("MesajIcerik")%></td>
                         <td><%#Eval("Tarih")%></td>
-<%--                        <td style="width: 200px; min-width: 200px; text-align: center;">
-                            <asp:HyperLink ID="HyperLink1" NavigateUrl='<%# "~/DuyuruGuncelle.aspx?DuyuruID="+Eval("DuyuruID")%>' runat="server" CssClass="btn btn-warning">Güncelle</asp:HyperLink>
-                            <asp:HyperLink ID="HyperLink2" NavigateUrl='<%# "~/DuyuruSil.aspx?DuyuruID="+Eval("DuyuruID")%>' runat="server" CssClass="btn btn-danger">Sil</asp:HyperLink>
-                        </td>--%>
                     </tr>
                 </ItemTemplate>
 

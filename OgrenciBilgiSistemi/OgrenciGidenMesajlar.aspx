@@ -15,7 +15,7 @@
 
                 <ItemTemplate>
                     <tr>
-                        <td><%#Eval("Alici")%></td>
+                        <td><%#Eval("MesajAlici")%></td>
                         <td><%#Eval("MesajBaslik")%></td>
                         <td><%#Eval("MesajIcerik")%></td>
                         <td><%#Eval("Tarih")%></td>

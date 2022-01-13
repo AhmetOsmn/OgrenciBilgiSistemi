@@ -15,7 +15,7 @@
 
                 <ItemTemplate>
                     <tr>
-                        <td><%#Eval("Gönderen")%></td>
+                        <td><%#Eval("MesajGonderen")%></td>
                         <td><%#Eval("MesajBaslik")%></td>
                         <td><%#Eval("MesajIcerik")%></td>
                         <td><%#Eval("Tarih")%></td>

@@ -12,7 +12,7 @@ namespace OgrenciBilgiSistemi
         protected void Page_Load(object sender, EventArgs e)
         {
             DataSetTableAdapters.MesajlarTableAdapter dt = new DataSetTableAdapters.MesajlarTableAdapter();
-            Repeater1.DataSource = dt.OgretmenGelenMesaj();
+            Repeater1.DataSource = dt.OgretmenGelenMesaj(Session["OgretmenNumara"].ToString());
             Repeater1.DataBind();
         }
     }
