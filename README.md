@@ -1,3 +1,5 @@
+![sertifika](https://user-images.githubusercontent.com/44196434/149627066-2b68c7c1-1989-4d20-81a4-68bcddeb53bf.jpg)
+
 # OgrenciBilgiSistemi
 ---
 ## Ögrenci Listesi
